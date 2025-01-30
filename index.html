@@ -10,6 +10,66 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@media (min-width: 80.625em) {
+				html[lang='de-DE'] .hero-page__title {
+					font-size: 4.625rem;
+				}
+			}
+
+			@media (max-width: 20em) {
+				html[lang='de-DE'] .hero-page__title {
+					font-size: 1.25rem;
+				}
+			}
+
+			@media (min-width: 20em) and (max-width: 80.625em) {
+				@supports (font-size: clamp(1.25rem, 0.1365979381rem + 5.5670103093vw, 4.625rem)) {
+					html[lang='de-DE'] .hero-page__title {
+						font-size: clamp(1.25rem, 0.1365979381rem + 5.5670103093vw, 4.625rem);
+					}
+				}
+				@supports not (font-size: clamp(1.25rem, 0.1365979381rem + 5.5670103093vw, 4.625rem)) {
+					html[lang='de-DE'] .hero-page__title {
+						font-size: calc(1.25rem + 3.375 * (100vw - 20rem) / 60.625);
+					}
+				}
+			}
+
+			html[lang='de-DE'] .middle-hero {
+				padding-left: 0;
+				justify-content: center;
+			}
+
+			@media (min-width: 82.5em) {
+				html[lang='de-DE'] .form-page__title {
+					font-size: 2rem;
+				}
+			}
+
+			@media (max-width: 20em) {
+				html[lang='de-DE'] .form-page__title {
+					font-size: 1.375rem;
+				}
+			}
+
+			@media (min-width: 20em) and (max-width: 82.5em) {
+				@supports (font-size: clamp(1.375rem, 1.175rem + 1vw, 2rem)) {
+					html[lang='de-DE'] .form-page__title {
+						font-size: clamp(1.375rem, 1.175rem + 1vw, 2rem);
+					}
+				}
+				@supports not (font-size: clamp(1.375rem, 1.175rem + 1vw, 2rem)) {
+					html[lang='de-DE'] .form-page__title {
+						font-size: calc(1.375rem + 0.625 * (100vw - 20rem) / 62.5);
+					}
+				}
+			}
+
+			html[lang='de-DE'] .form-page__title {
+				min-height: 80px;
+			}
+	</style>
 </head>
 
 <body>
